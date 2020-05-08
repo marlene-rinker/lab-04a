@@ -1,0 +1,13 @@
+
+* {
+  box-sizing: border-box;
+  background-color: #ccc;
+  outline: red 2px dotted;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
