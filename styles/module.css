@@ -1,0 +1,22 @@
+section {
+  background-color: purple;
+  color: white;
+}
+
+
+
+@media (min-width: 768px) {
+  
+  section {
+    color: blue;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 960px) {
+  
+  section {
+    color: green;
+    background-color: black;
+  }
+}
