@@ -1,7 +1,6 @@
+
 body {
   width: 375px;
-  /* margin: 0 auto;
-  align-items: center; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -15,29 +14,19 @@ section {
 
 section:nth-child(1) {
   height: 75px;
-  /* line-height: 75px; */
 
 }
 
 section:nth-child(2) {
   height: 150px;
-  /* line-height: 150px; */
-  /* if you know the height, this works easiest */
+  
 }
 
 section:nth-child(3), section:nth-child(4) {
-  /* line-height: 125px; */
   height: 125px;
 }
 
 section:nth-child(5), section:nth-child(6), section:nth-child(7), section:nth-child(8){
-  /* display: flex;
-  /* flex-direction: row;  */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-wrap: row wrap; */
-  /* flex-flow: wrap; */
-  /* align-items:flex-start; */
   height: 250px;
   width: 50%;
 }
@@ -50,35 +39,55 @@ section:nth-child(9) {
   
   body {
     width: 768px;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "box-a box-a"
+    "box-b box-b"
+    '. .'
+    '. .'
+    '. .'
+    "box-i box-i";
+}
+
+
+  section {
+    display: grid;
   }
 
   section:nth-child(1) {
   height: 80px;
   line-height: 80px;
+  grid-area: box-a;
 
   }
 
   section:nth-child(2) {
     height: 300px;
     line-height: 300px;
-    /* width: 200px; */
+    grid-area: box-b;
   }
 
   section:nth-child(3), section:nth-child(4) {
     line-height: 200px;
     height: 200px;
-    width: 380px;
+    /* width: 380px; */
   }
 
   section:nth-child(5), section:nth-child(6), section:nth-child(7), section:nth-child(8){
+  
     height: 250px;
-    width: 190px;
+    width: 100%;
+    /* width: 50%; */
+    /* width: 190px; */
   }
 
   section:nth-child(9) {
     height: 150px;
     line-height: 150px;
-    width: 760px;
+    grid-area: box-i;
+    /* width: 768px; */
   }
 }
 
@@ -87,6 +96,16 @@ section:nth-child(9) {
   
   body {
     width: 960px;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "box-a box-a"
+    "box-b box-b"
+    '. .'
+    '. .'
+    '. .'
+    "box-i box-i";
   }
 
   section:nth-child(1) {
