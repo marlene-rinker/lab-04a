@@ -1,6 +1,6 @@
 
 body {
-  width: 375px;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
 }
@@ -38,7 +38,7 @@ section:nth-child(9) {
 @media (min-width: 768px) {
   
   body {
-    width: 768px;
+    width: 100vw;
     display: grid;
     grid-template-columns: 50%;
     grid-template-rows: auto;
@@ -58,36 +58,27 @@ section:nth-child(9) {
 
   section:nth-child(1) {
   height: 80px;
-  line-height: 80px;
   grid-area: box-a;
 
   }
 
   section:nth-child(2) {
     height: 300px;
-    line-height: 300px;
     grid-area: box-b;
   }
 
   section:nth-child(3), section:nth-child(4) {
-    line-height: 200px;
     height: 200px;
-    /* width: 380px; */
   }
 
   section:nth-child(5), section:nth-child(6), section:nth-child(7), section:nth-child(8){
-  
     height: 250px;
     width: 100%;
-    /* width: 50%; */
-    /* width: 190px; */
   }
 
   section:nth-child(9) {
     height: 150px;
-    line-height: 150px;
     grid-area: box-i;
-    /* width: 768px; */
   }
 }
 
@@ -95,45 +86,54 @@ section:nth-child(9) {
 @media (min-width: 960px) {
   
   body {
-    width: 960px;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 50%;
+    grid-template-columns: 20.834% 19.792% 19.792% 19.792% 19.792%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "box-a box-a"
-    "box-b box-b"
-    '. .'
-    '. .'
-    '. .'
-    "box-i box-i";
+    grid-auto-flow: row;
+  }
+
+  section{
+    display:grid;
   }
 
   section:nth-child(1) {
   height: 100px;
-  line-height: 100px;
+  grid-column: 1/6;
+ 
 
   }
 
   section:nth-child(2) {
     height: 600px;
-    line-height: 600px;
-    width: 200px;
+    grid-column: 1;
+    grid-row: 2/5;
+
   }
 
-  section:nth-child(3), section:nth-child(4) {
+  section:nth-child(3) {
     line-height: 200px;
     height: 200px;
-    width: 380px;
+    grid-row: 2;
+    grid-column: 2/4;
+  }
+
+  section:nth-child(4) {
+    line-height: 200px;
+    height: 200px;
+    grid-row: 2;
+    grid-column: 4/6;
   }
 
   section:nth-child(5), section:nth-child(6), section:nth-child(7), section:nth-child(8){
     height: 250px;
-    width: 190px;
+    grid-row: 3;
   }
 
   section:nth-child(9) {
     height: 150px;
     line-height: 150px;
-    width: 760px;
+    grid-row: 4;
+    grid-column: 2/6;
   }
 }
